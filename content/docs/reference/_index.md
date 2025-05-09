@@ -1,12 +1,14 @@
 ---
-title: "Topics"
+title: "Reference"
 description: ""
 summary: ""
-date: 2025-02-26T16:06:50+02:00
-lastmod: 2025-02-26T16:06:50+02:00
+date: 2023-09-07T16:12:37+02:00
+lastmod: 2023-09-07T16:12:37+02:00
 draft: false
-weight: 800
+weight: 900
 toc: true
+sidebar:
+  collapsed: true
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
