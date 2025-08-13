@@ -1,0 +1,6 @@
+{{- /* Show FlexSearch on pages that have search enabled */ -}}
+{{- $showFlexSearch := false -}}
+{{- if or (eq .Kind "page") (eq .Kind "section") (eq .Kind "term") (eq .Kind "taxonomy") -}}
+  {{- $showFlexSearch = true -}}
+{{- end -}}
+{{- .Scratch.Set "showFlexSearch" $showFlexSearch -}}

@@ -8,7 +8,8 @@ enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
 languageCode = "en-US"
-paginate = 10
+[pagination]
+  pagerSize = 10
 rssLimit = 10
 summarylength = 20 # 70 (default)
 
@@ -21,6 +22,10 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
 
 [build.buildStats]
   enable = true
+
+[build]
+  noChmod = true
+  writeStats = true
 
 [outputs]
   home = ["HTML", "RSS", "searchIndex"]
