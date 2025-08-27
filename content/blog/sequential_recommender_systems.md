@@ -26,7 +26,7 @@ I am blessed to have a cat baby, and I enjoy baking a lot, however recently I st
 
 Apparently my purchases have sequential dependencies, which are unable to be captured by conventional recommendation systems, including collaborative filtering and content-based filtering, as they model/depict consumers by their interaction to the items and it's order-agnostic and it's also just pair-wise correlation between the consumer and items based on engagements (clicks, conversions etc).
 
-And to model such sequential dependencies, there are a lot of different models from non-DNN, DNN, to latest LLM. This blog post summarizes how each model works for my user behaviors. For difficulties/challenges/characteristics of sequential recommender, please refer to [Sequential Recommender Systems: Challenges, Progress and Prospects](https://arxiv.org/pdf/2001.04830) 
+And to model such sequential dependencies, there are a lot of different models from non-DNN, DNN, to latest LLM. This doc summarizes how each model works for my user behaviors. For difficulties/challenges/characteristics of sequential recommender, please refer to [Sequential Recommender Systems: Challenges, Progress and Prospects](https://arxiv.org/pdf/2001.04830) 
 
 ### Collaborative Filtering - Matrix-factorization CF
 Matrix-Factorization CF learns a latent vector $p_u$ for each user. Although it's not frequency by category, but in practice, $p_u$ ends up to be:
