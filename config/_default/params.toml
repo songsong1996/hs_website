@@ -1,6 +1,6 @@
 # Hugo
-title = "My Docs"
-description = "Congrats on setting up a new Doks project!"
+title = "Heather Song's Blog"
+description = "Notes on ML research, papers, and ideas."
 images = ["cover.png"]
 
 # mainSections
