@@ -1,10 +1,10 @@
 # Hugo
-title = "Heather Song's Blog"
+title = "Heather's Blog"
 description = "Notes on ML research, papers, and ideas."
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["docs"]
+mainSections = ["posts"]
 
 [social]
   twitter = "getdoks"
@@ -44,7 +44,7 @@ mainSections = ["docs"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
-  sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  sectionNav = ["posts"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false

@@ -37,7 +37,7 @@ $$p_u \approx (Q^⊤C_uQ+λI)^{−1} Q^⊤C_ur_u​$$
 Here:
 * {{< math >}}$|I|${{< /math >}} is the size of items; $k$ is item factor dimensions.
 * {{< math >}}$Q \in \mathbb{R}^{|I|\times k}${{< /math >}}: Item factor matrix. Row $i$ is the $k$-dim vector for item $i$. 
-* {{< math >}}$C_u \in \mathbb{R}^{|I|\times |I|}${{< /math >}}: A **diagonal** confidence matrix (all non-diagonal = 0) of user {{< math >}}$u${{< /math >}} for items. {{< math >}}$c_{ui}$ is the confidence score of user $u$ with item $i$. It's normally derived from engagement data {{< math >}}$r_{ui}${{< /math >}} (the interaction #clicks, #conversions): 
+* {{< math >}}$C_u \in \mathbb{R}^{|I|\times |I|}${{< /math >}}: A **diagonal** confidence matrix (all non-diagonal = 0) of user {{< math >}}$u${{< /math >}} for items. {{< math >}}$c_{ui}${{< /math >}} is the confidence score of user $u$ with item $i$. It's normally derived from engagement data {{< math >}}$r_{ui}${{< /math >}} (the interaction #clicks, #conversions): 
 
 ```math
 $$c_{ui} = 1 + \alpha r_{ui}$$
