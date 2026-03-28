@@ -29,8 +29,8 @@
   url = "/tutorial/lorem/"
 
 [[main]]
-  name = "Posts"
-  url = "/posts/"
+  name = "Blog"
+  url = "/blog/"
   weight = 10
 
 # [[social]]
