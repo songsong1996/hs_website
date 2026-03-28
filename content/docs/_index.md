@@ -1,16 +1,18 @@
 ---
-title: "Docs"
-description: ""
-summary: ""
+title: "Paper Reading Notes"
+description: "Structured notes on ML papers, research, and deep dives into machine learning topics"
+summary: "Collection of organized reading notes on machine learning papers and research"
 date: 2023-09-07T16:12:03+02:00
-lastmod: 2023-09-07T16:12:03+02:00
+lastmod: 2026-03-28T00:00:00Z
 draft: false
-weight: 999
+weight: 20
 toc: true
 params:
   seo:
-    title: "" # custom title (optional)
-    description: "" # custom description (recommended)
-    canonical: "" # custom canonical URL (optional)
-    robots: "" # custom robot tags (optional)
+    title: "Paper Reading Notes"
+    description: "Reading notes on machine learning papers"
+    canonical: ""
+    robots: ""
 ---
+
+A curated collection of structured reading notes on machine learning papers, with deep-dives into recommendation systems, neural networks, and other ML research.
