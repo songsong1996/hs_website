@@ -4,7 +4,11 @@ description = "Notes on ML research, papers, and ideas."
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["posts"]
+mainSections = ["blog"]
+
+# Enable mathematical rendering on every page (unless you set the `math` parameter to `false` in front matter)
+math = false # false (default) or true
+mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
 [social]
   twitter = "getdoks"
@@ -17,7 +21,7 @@ mainSections = ["posts"]
 
   # Navbar
   navbarSticky = true # true (default) or false
-  containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
+  containerBreakpoint = "fluid" # "", "sm", "md", "lg", "xl", "xxl", or "fluid" (default)
 
   ## Button
   navBarButton = false # false (default) or true
@@ -44,7 +48,8 @@ mainSections = ["posts"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
-  sectionNav = ["posts"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  sectionSwitcher = false # true or false (default)
+  sectionNav = ["blog"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false
@@ -61,6 +66,7 @@ mainSections = ["posts"]
   # UX
   headerBar = false # true (default) or false
   backgroundDots = true # true (default) or false
+  aiButtons = true # true (default) or false
 
   # Homepage
   sectionFooter = false # false (default) or true
@@ -74,25 +80,11 @@ mainSections = ["posts"]
   editPage = false # false (default) or true
   lastMod = false # false (default) or true
   repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
-  docsRepo = "https://github.com/h-enk/doks"
+  docsRepo = "https://github.com/songsong1996/hs_website"
   docsRepoBranch = "main" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
 
   krokiURL = "https://kroki.io" # "https://kroki.io" (default) or custom URL like http://localhost:8000.
-
-  # SCSS colors
-  # backGround = "yellowgreen"
-  ## Dark theme
-  # textDark = "#dee2e6" # "#dee2e6" (default), "#dee2e6" (orignal), or custom color
-  # accentDark = "#5d2f86" # "#5d2f86" (default), "#5d2f86" (original), or custom color
-  ## Light theme
-  # textLight = "#1d2d35" # "#1d2d35" (default), "#1d2d35" (orignal), or custom color
-  # accentLight = "#8ed6fb" # "#8ed6fb" (default), "#8ed6fb" (orignal), or custom color
-
-  # [doks.menu]
-  #   [doks.menu.section]
-  #     auto = true # true (default) or false
-  #     collapsibleSidebar = true # true (default) or false
 
 # Debug
 [render_hooks.image]
@@ -108,33 +100,33 @@ mainSections = ["posts"]
     decoding = "async" # sync, async, or auto (default)
     fetchpriority = "auto" # high, low, or auto (default)
     loading = "lazy" # eager or lazy (default)
-    widths = [480, 576, 768, 1025, 1200, 1440] # [640, 768, 1024, 1366, 1600, 1920] for example
+    widths = [480, 576, 768, 1025, 1200, 1440]
     sizes = "auto" # 100vw (default), 75vw, or auto for example
     process = "" # "fill 1600x900" or "fill 2100x900" for example
     lqip = "16x webp q20" # "16x webp q20" or "21x webp q20" for example
 
 # Inline SVG (@thulite/inline-svg)
 [inline_svg]
-  iconSetDir = "tabler-icons" # "tabler-icons" (default)
+  iconSetDir = "tabler-icons" # tabler-icons (default)
+  iconSetVariant = "outline" # outline (default) or filled
 
 # SEO (@thulite/seo)
 [seo]
   [seo.title]
-    separator = " | "
-    suffix = ""
+    separator = "" # "|" (default)
+    suffix = "" # title hugo.toml (default)
+  [seo.description]
+    summaryFallback = "" # "" (default)
   [seo.favicons]
-    sizes = []
     icon = "favicon.png" # favicon.png (default)
     svgIcon = "favicon.svg" # favicon.svg (default)
-    maskIcon = "mask-icon.svg" # mask-icon.svg (default)
-    maskIconColor = "white" # white (default)
   [seo.schemas]
     type = "Organization" # Organization (default) or Person
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
-    name = "Thulite" # Name of Organization or Person
-    sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
-    images = ["cover.png"] # ["cover.png"] (default)
-    article = [] # Article sections
-    newsArticle = [] # NewsArticle sections
+    name = "Heather's Blog"
+    sameAs = []
+    images = ["cover.png"]
+    article = []
+    newsArticle = []
     blogPosting = ["blog"] # BlogPosting sections
-    product = [] # Product sections
+    product = []
