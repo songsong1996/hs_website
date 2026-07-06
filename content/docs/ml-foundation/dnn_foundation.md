@@ -9,6 +9,7 @@ weight: 30
 toc: true
 categories: ["machine-learning", "deep-learning"]
 tags: ["dnn", "regularization", "dropout", "overfitting"]
+contributors: []
 params:
   seo:
     title: "DNN Foundation Notes"
