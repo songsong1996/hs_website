@@ -1,6 +1,6 @@
 ---
 title: "DCN (Deep & Cross Network)"
-description: "Interview questions on Deep & Cross Network"
+description: "In-depth interview questions and technical analysis of the Deep description: "Interview questions on Deep & Cross Network" Cross Network (DCN) architecture for feature crossing in recommendation systems."
 summary: "Questions on feature crossing and DCN architecture for recommendations"
 date: 2026-04-22T00:00:00Z
 lastmod: 2026-04-22T00:00:00Z

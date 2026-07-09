@@ -1,6 +1,6 @@
 ---
 title: "Reading Notes"
-description: "Detailed reading notes on machine learning papers and research"
+description: "Comprehensive reading notes on machine learning papers and research topics with detailed analysis of key concepts, architectures, and insights."
 summary: "In-depth analysis and notes on ML papers covering recommendation systems, neural networks, and more"
 date: 2026-03-28T00:00:00Z
 lastmod: 2026-03-28T00:00:00Z

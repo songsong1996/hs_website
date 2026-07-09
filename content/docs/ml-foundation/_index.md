@@ -1,6 +1,6 @@
 ---
 title: "ML Engineering Questions"
-description: "Interview questions on machine learning engineering topics"
+description: "Comprehensive interview questions and technical deep-dives on machine learning engineering topics, neural network architectures, and production ML systems."
 summary: "Deep-dive questions on deep learning models, architectures, and production systems"
 date: 2026-04-22T00:00:00Z
 lastmod: 2026-04-22T00:00:00Z

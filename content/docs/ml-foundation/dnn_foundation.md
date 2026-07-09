@@ -1,6 +1,6 @@
 ---
 title: "DNN Foundation"
-description: "Reading notes on Deep Neural Network fundamentals"
+description: "Comprehensive reading notes on Deep Neural Network fundamentals, covering regularization, dropout, and overfitting prevention techniques from the Fundamentals of Deep Learning book."
 summary: "Notes on DNN foundation concepts from Fundamentals of Deep Learning book"
 date: 2026-07-05T00:00:00Z
 lastmod: 2026-07-05T00:00:00Z

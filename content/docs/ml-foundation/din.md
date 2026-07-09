@@ -1,6 +1,6 @@
 ---
 title: "DIN (Deep Interest Network)"
-description: "Interview questions on Deep Interest Network"
+description: "Comprehensive interview questions and technical deep-dive on the Deep Interest Network (DIN) architecture for attention-based recommendation models and dynamic user interest representation."
 summary: "Questions on attention-based recommendation models and user interest representation"
 date: 2026-04-22T00:00:00Z
 lastmod: 2026-04-22T00:00:00Z

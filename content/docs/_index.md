@@ -1,6 +1,6 @@
 ---
 title: "Paper Reading Notes"
-description: "Structured notes on ML papers, research, and deep dives into machine learning topics"
+description: "Comprehensive structured notes on machine learning papers, research articles, and deep technical dives into advanced machine learning topics including deep learning, recommendation systems, and neural architectures."
 summary: "Collection of organized reading notes on machine learning papers and research"
 date: 2023-09-07T16:12:03+02:00
 lastmod: 2026-03-28T00:00:00Z

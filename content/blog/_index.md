@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-description: "Notes on ML research, papers, and ideas — from sequential recommendation to LLMs."
+description: "Detailed articles and research notes on machine learning, deep neural networks, recommendation systems, sequential models, and other machine learning topics."
 summary: ""
 date: 2023-09-07T16:21:44+02:00
 lastmod: 2023-09-07T16:21:44+02:00

@@ -1,6 +1,6 @@
 ---
 title: "MMoE (Multi-gate Mixture of Experts)"
-description: "Interview questions on Multi-gate Mixture of Experts"
+description: "Technical interview questions and comprehensive analysis of the Multi-gate Mixture of Experts (MMoE) architecture for multi-task learning in neural networks."
 summary: "Questions on multi-task learning and mixture of experts architectures"
 date: 2026-04-22T00:00:00Z
 lastmod: 2026-04-22T00:00:00Z

@@ -1,6 +1,6 @@
 ---
 title: "Transformer"
-description: "Interview questions on Transformer architecture"
+description: "In-depth interview questions and technical deep-dive into Transformer architecture, attention mechanisms, self-attention, and modern language models."
 summary: "Questions on attention mechanisms, self-attention, and Transformer models"
 date: 2026-04-22T00:00:00Z
 lastmod: 2026-04-22T00:00:00Z
