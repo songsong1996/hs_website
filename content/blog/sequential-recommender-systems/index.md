@@ -30,38 +30,37 @@ Apparently my purchases have sequential dependencies, which are unable to be cap
 And to model such sequential dependencies, there are a lot of different models from non-DNN, DNN, to latest LLM. This doc summarizes how each model works for my user behaviors. For difficulties/challenges/characteristics of sequential recommender, please refer to [Sequential Recommender Systems: Challenges, Progress and Prospects](https://arxiv.org/pdf/2001.04830) 
 
 ### Collaborative Filtering - Matrix-factorization CF
-Matrix-Factorization CF learns a latent vector $p_u$ for each user. Although it's not frequency by category, but in practice, $p_u$ ends up to be:
-```math
-$$p_u \approx (Q^⊤C_uQ+λI)^{−1} Q^⊤C_ur_u​$$
+Matrix-Factorization CF learns a latent vector p_u for each user. Although it's not frequency by category, but in practice, p_u ends up to be a function that normalizes the user factor by engagement with confidence scores.
+
+The key components are:
+* |I| is the size of items; k is item factor dimensions.
+* Q: Item factor matrix, where each row is a k-dimensional vector for an item
+* C_u: A diagonal confidence matrix of user u for items, where c_ui is the confidence score of user u with item i, normally derived from engagement data (clicks, conversions)
+
+The confidence score is typically defined as:
+```
+c_ui = 1 + α * r_ui
 ```
 
-Here:
-* {{< math >}}$|I|${{< /math >}} is the size of items; $k$ is item factor dimensions.
-* {{< math >}}$Q \in \mathbb{R}^{|I|\times k}${{< /math >}}: Item factor matrix. Row $i$ is the $k$-dim vector for item $i$. 
-* {{< math >}}$C_u \in \mathbb{R}^{|I|\times |I|}${{< /math >}}: A **diagonal** confidence matrix (all non-diagonal = 0) of user {{< math >}}$u${{< /math >}} for items. {{< math >}}$c_{ui}${{< /math >}} is the confidence score of user $u$ with item $i$. It's normally derived from engagement data {{< math >}}$r_{ui}${{< /math >}} (the interaction #clicks, #conversions): 
+Where r_ui is the interaction metric (clicks, conversions).
 
-```math
-$$c_{ui} = 1 + \alpha r_{ui}$$
-```
-
-The term {{< math >}}$(Q^⊤C_uQ+λI)^{−1}${{< /math >}} is some sort of normalization, while $C_u$ and $r_u$ are both related to consumer engagement, therefore the learned consumer representations end up engagement (clicks/conversions) weighted item vectors. So in my case, my representation will be closest to cat supplies embeddings. Therefore when predict the next items, it will likely end up **cat supplies**. 
+The normalization term ensures that the learned consumer representations are weighted by engagement (clicks/conversions) on item vectors. In the example, the user representation will be closest to cat supplies embeddings, so predictions will likely favor cat supplies. 
 
 ### Before DNN - Sequential pattern mining
 Mine frequent patterns on sequence data, and then utilize the patterns for subsequent recommendations. Although simple and straightforward, but the patterns could be redundant. e.g. I am buying cat supplies monthly, while sometimes buying bake supplies in between. The pattern could be something like `cat_food` -> `cat_litter` -> `baking_supplies`. 
 
 ### Basic Markov Chain
-The hypothesis is future purchase depends only on previous $k$ purchases. And a transition matrix will be learned, with each value represent how often from state {{< math >}}$i${{< /math >}} to {{< math >}}$j${{< /math >}}, and then run a row normalization (each row sum = 1). 
-- First order chain is to compute {{< math >}}$ P(x_{t+1}=j | x_t = i)${{< /math >}}
-- High order chain is to compute {{< math >}}$ P(x_{t+1}=j | x_t = t, x_{t-1} = t_1,... x_{t-k} = t_k)${{< /math >}}
-  - And for high order chain, the predicted probability is:
-   ```math
-   $P(X,T) = P(x_1, ...x_k) \Pi_{t=k+1}^T P(x_t | x_{t-1}...x_{t-k})
-   ```
-The trainsaction matrix is something like:
-```math
-$$T_{ij} = \frac{\#(i \rightarrow j)}{\sum_{j'} \#(i \rightarrow j')}$$
-```
-Since my last item is lifting glove, the prediction will be the one with largest probability in transaction matrix row {{< math >}}$row_{(lifting glove)}${{< /math >}}. 
+The hypothesis is that future purchases depend only on the previous k purchases. A transition matrix is learned where each value represents how often transitions occur from state i to state j, with row normalization (each row sum = 1).
+
+**Key concepts:**
+- **First order chain:** Computes P(x_{t+1}=j | x_t = i)
+- **High order chain:** Computes P(x_{t+1}=j | x_t, x_{t-1}, ..., x_{t-k})
+  - For high order chains, the predicted probability is: P(X,T) = P(x_1, ...x_k) × ∏_{t=k+1}^T P(x_t | x_{t-1}...x_{t-k})
+
+**Transition matrix:**
+The transaction matrix is computed as: T_ij = #(i → j) / ∑_{j'} #(i → j')
+
+Since the last item is lifting glove, the prediction will be whichever item has the largest probability in the lifting glove row of the transition matrix. 
 
 ### Latent Markov Embedding based approach
 
