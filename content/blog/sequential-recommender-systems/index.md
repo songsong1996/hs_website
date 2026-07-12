@@ -1,6 +1,6 @@
 ---
 title: "Sequential Recommender Systems Walk-Through"
-description: "Comprehensive walkthrough of sequential recommender systems evolution from traditional collaborative filtering through deep learning to the modern LLM wave, with detailed examples and comparisons."
+description: "Walkthrough of sequential recommender systems from collaborative filtering through deep learning to LLMs, with detailed comparisons."
 summary: "By modeling the same example, compare the difference of all SRS related methods"
 date: 2025-08-10T16:27:22+02:00
 lastmod: 2025-08-10T16:27:22+02:00
