@@ -11,6 +11,7 @@ tags: ["sequential-recommendation", "collaborative-filtering", "deep-learning"]
 contributors: []
 pinned: false
 homepage: false
+image: "" # Add header image path here (e.g., /images/blog/sequential-recommender-systems/header.jpg)
 params:
   seo:
     title: "" # custom title (optional)
