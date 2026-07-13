@@ -60,3 +60,34 @@
     color: white;
   }
 }
+
+// Density pass — tighten theme's default section/card spacing for a denser,
+// less "airy SaaS landing page" feel.
+.section {
+  padding-top: 3rem;    // theme default: 5rem
+  padding-bottom: 3rem; // theme default: 5rem
+}
+
+.section-md {
+  padding-top: 2rem;    // theme default: 3rem
+  padding-bottom: 2rem; // theme default: 3rem
+}
+
+.blog-header {
+  margin-bottom: 1rem; // theme default: 2rem
+}
+
+.img-post-single {
+  margin-bottom: 1rem; // theme default: 2rem
+}
+
+.tag-list-single {
+  margin-top: 1.5rem;   // theme default: 3rem
+  margin-bottom: 0.75rem; // theme default: 1rem
+}
+
+// Card header-image sizing for post-card partial
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}

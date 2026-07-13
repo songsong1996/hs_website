@@ -1,1 +1,18 @@
-// Put your custom SCSS variables here
+// Academic serif typography, matching explained.ai's dense technical-blog feel
+// System-serif stack only — no webfont download needed (avoids FOUT/perf cost).
+
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, ui-serif, serif;
+
+// The theme's own common/_variables-overrides.scss sets
+// $font-family-sans-serif: "Jost", ... and never sets $headings-font-family,
+// so Bootstrap's $font-family-base (-> $font-family-sans-serif) drives BOTH
+// body and headings. Reassigning this single variable here covers both.
+$font-family-sans-serif: $font-family-serif;
+
+// Denser line spacing than Bootstrap's 1.5 default, still readable for
+// long-form serif technical prose.
+$line-height-base: 1.45;
+
+// Semi-bold serif headings read as "academic," not "SaaS bold sans."
+// (Theme's variables-overrides.scss sets this to 700; override to 600.)
+$headings-font-weight: 600;

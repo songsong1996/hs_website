@@ -1,0 +1,24 @@
+{{/*
+  Renders a single post card: optional header image, linked title,
+  always-present description (summary -> description -> auto-summary
+  fallback), tags, and publish date.
+  Usage: {{ partial "post-card.html" (dict "page" .) }}
+*/}}
+{{ $page := .page }}
+<div class="card h-100">
+  {{ with $page.Params.image }}
+  <img src="{{ . }}" class="card-img-top" alt="{{ $page.Title }}" loading="lazy">
+  {{ end }}
+  <div class="card-body d-flex flex-column">
+    <h3 class="h5"><a class="text-body" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+    {{ $desc := $page.Params.summary | default $page.Params.description }}
+    {{ if not $desc }}{{ $desc = $page.Summary | plainify | truncate 160 }}{{ end }}
+    <p class="small text-muted mb-2">{{ $desc }}</p>
+    {{ with $page.Params.tags }}
+    <div class="mb-2">
+      {{ range . }}<a href="/tags/{{ . | urlize }}/" class="badge bg-light text-dark text-decoration-none me-1">{{ . }}</a>{{ end }}
+    </div>
+    {{ end }}
+    <p class="small text-muted mb-0 mt-auto">{{ time.Format ":date_long" $page.PublishDate }}</p>
+  </div>
+</div>

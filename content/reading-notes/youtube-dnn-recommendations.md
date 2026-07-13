@@ -9,6 +9,7 @@ weight: 10
 categories: ["machine-learning", "recommendation-systems"]
 tags: ["neural-networks", "deep-learning", "embeddings", "ranking", "collaborative-filtering"]
 contributors: []
+image: ""
 params:
   seo:
     title: "Deep Neural Networks for YouTube Recommendations"
