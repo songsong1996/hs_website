@@ -91,3 +91,23 @@
   height: 180px;
   object-fit: cover;
 }
+
+// Ensure serif font applies everywhere (override any remaining sans-serif defaults)
+body, body * {
+  font-family: Georgia, Cambria, "Times New Roman", Times, ui-serif, serif !important;
+}
+
+// Code and monospace stay monospace
+code, pre, kbd, samp, var, .font-monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+// Aggressive margin reduction for density
+p {
+  margin-bottom: 0.5rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.5rem !important;
+}

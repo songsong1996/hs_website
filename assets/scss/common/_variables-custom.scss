@@ -11,8 +11,12 @@ $font-family-sans-serif: $font-family-serif;
 
 // Denser line spacing than Bootstrap's 1.5 default, still readable for
 // long-form serif technical prose.
-$line-height-base: 1.45;
+$line-height-base: 1.35;
 
 // Semi-bold serif headings read as "academic," not "SaaS bold sans."
 // (Theme's variables-overrides.scss sets this to 700; override to 600.)
 $headings-font-weight: 600;
+
+// Tighten line-heights for headings and paragraphs
+$line-height-sm: 1.3;
+$headings-line-height: 1.3;
