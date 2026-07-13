@@ -34,8 +34,8 @@
   weight = 10
 
 [[main]]
-  name = "Docs"
-  url = "/docs/"
+  name = "Reading Notes"
+  url = "/reading-notes/"
   weight = 20
 
 # [[social]]

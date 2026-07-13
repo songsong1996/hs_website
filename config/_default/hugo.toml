@@ -71,8 +71,8 @@ copyRight = "Copyright (c) 2020-2026 Thulite"
 
 [permalinks]
   blog = "/blog/:slug/"
-  docs = "/docs/:sections[1:]/:slug/"
-# docs = "/docs/1.0/:sections[1:]/:slug/"
+  reading-notes = "/reading-notes/:slug/"
+# docs = "/docs/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]
   keepComments = true
