@@ -1,1 +1,62 @@
-// Put your custom SCSS code here
+// Custom color scheme - Purple theme for both light and dark modes
+
+// Light mode purple colors
+:root[data-bs-theme="light"],
+:root {
+  --bs-primary: #6366f1; // Indigo/Purple
+  --bs-primary-rgb: 99, 102, 241;
+  --bs-link-color: #6366f1;
+  --bs-link-hover-color: #4f46e5;
+}
+
+// Dark mode adjustments - slightly different purple
+:root[data-bs-theme="dark"] {
+  --bs-primary: #818cf8; // Lighter purple for dark mode
+  --bs-primary-rgb: 129, 140, 248;
+  --bs-link-color: #818cf8;
+  --bs-link-hover-color: #a5b4fc;
+}
+
+// Button styling
+.btn-primary {
+  background-color: #6366f1;
+  border-color: #6366f1;
+
+  &:hover {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+  }
+}
+
+:root[data-bs-theme="dark"] .btn-primary {
+  background-color: #818cf8;
+  border-color: #818cf8;
+
+  &:hover {
+    background-color: #a5b4fc;
+    border-color: #a5b4fc;
+  }
+}
+
+// Outline button styling
+.btn-outline-primary {
+  color: #6366f1;
+  border-color: #6366f1;
+
+  &:hover {
+    background-color: #6366f1;
+    border-color: #6366f1;
+    color: white;
+  }
+}
+
+:root[data-bs-theme="dark"] .btn-outline-primary {
+  color: #818cf8;
+  border-color: #818cf8;
+
+  &:hover {
+    background-color: #818cf8;
+    border-color: #818cf8;
+    color: white;
+  }
+}
