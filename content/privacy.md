@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: "Privacy policy describing how this website collects, uses, and protects user data and personal information."
+description: "Privacy policy describing how this website collects, uses, and protects user data and personal information with transparency."
 summary: "Privacy policy for this website"
 date: 2023-09-07T17:19:07+02:00
 lastmod: 2023-09-07T17:19:07+02:00

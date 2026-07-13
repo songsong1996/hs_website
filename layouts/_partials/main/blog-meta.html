@@ -1,0 +1,8 @@
+{{ $contributors := .Params.contributors }}
+{{ if and (isset .Params "contributors") (gt (len $contributors) 0) }}
+  <div class="blog-meta">
+    {{ range $contributors }}
+      <span class="contributor">{{ . }}</span>
+    {{ end }}
+  </div>
+{{ end }}
